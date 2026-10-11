@@ -27,4 +27,4 @@ print("")
 #DISK
 print("DISK STATS:")
 print("-----------------")
-
+print("Total Disk Space:", ConvertGiB(psutil.disk_usage('/').total), "GiB")
