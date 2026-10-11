@@ -1,0 +1,28 @@
+import psutil
+#Vaiables
+memory = psutil.virtual_memory()
+
+#Functions
+def ConvertGiB(bytes):
+    return round(bytes / (1024 ** 3))
+
+#CPU
+print("CPUS STATS:")
+print("-----------------")
+
+print("Physical CPUS:", psutil.cpu_count(logical=False))
+print("Logical CPUS:", psutil.cpu_count(logical = True))
+print("")
+
+#MEMORY
+print("MEMORY STATS:")
+print("-----------------")
+
+print("Total Memory:", ConvertGiB(memory.total), "GiB")
+print("Available Memory:", ConvertGiB(memory.available), "GiB")
+print("Used Memory:", ConvertGiB(memory.used), "GiB")
+print("Memory Percentage:", memory.percent, "%")
+print("")
+
+
+
