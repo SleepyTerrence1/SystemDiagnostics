@@ -24,5 +24,7 @@ print("Used Memory:", ConvertGiB(memory.used), "GiB")
 print("Memory Percentage:", memory.percent, "%")
 print("")
 
-
+#DISK
+print("DISK STATS:")
+print("-----------------")
 
